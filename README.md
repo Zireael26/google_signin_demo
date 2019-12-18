@@ -8,11 +8,11 @@ Steps to remember:
 ## Commands to generate keystores and fingerprints
 
 For Keystore generation:
-Debug: (Do not change passwords/name/alias of the keystore)
+Debug: (Do not try to generate your own)
+It is located in the following directories
 
-```bash
-keytool -genkey -v -keystore debug.keystore -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000
-```
+Linux: ~/.android/debug.keystore
+Windows: C:/Users/USERNAME/.android/debug.keystore
 
 Release:
 
@@ -30,7 +30,7 @@ keytool -list -v -keystore <keystore path> -alias <alias-name> -storepass <store
 Specific to the debug fingerprints for default values
 
 ```bash
-keytool -list -v -keystore debug.keystore -alias androiddebugkey -storepass android -keypass android
+keytool -list -v -keystore ~/.android/debug.keystore -alias androiddebugkey -storepass android -keypass android
 ```
 
 Release:
